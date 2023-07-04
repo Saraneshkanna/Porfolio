@@ -2,7 +2,7 @@ import React from 'react'
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
-import "../styles/Home.css"
+import * as THREE from 'three';
 
 function Home() {
   return (
@@ -17,7 +17,7 @@ function Home() {
             </div>
         </div>
         <div className='skills'>
-            <h1>skills</h1>
+            <h1>Skills</h1>
         </div>
     </div>
   )
