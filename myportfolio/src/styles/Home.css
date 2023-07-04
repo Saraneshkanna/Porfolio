@@ -13,7 +13,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #21325e;
+    background-color: #ffffff;
     color: #f0f0f0;
   }
   
@@ -77,4 +77,8 @@
     .skills h2 {
       font-size: 30px;
     }
+  }
+
+  canvas{
+    height: 1000px;
   }
