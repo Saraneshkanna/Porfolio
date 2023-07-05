@@ -6,7 +6,7 @@ import '../styles/Home.css'
 import * as THREE from 'three';
 import {Canvas} from '@react-three/fiber';
 import { OrbitControls, useHelper, Plane } from '@react-three/drei';
-import Carousel from "../components/NoHorseCarousel2"
+import Carousel from "../components/NoHorseCarousel3"
 import { PointLight, PointLightHelper } from 'three';
 import { useControls} from 'leva'
 
@@ -29,11 +29,11 @@ function Home() {
                     <OrbitControls enableZoom={false} />
                     <Plane scale={10} rotation-x={-Math.PI / 2} position-y={-1} />
                     <pointLight ref={pointLightRef} intensity={intensity} position={[x, y, z]}  />
-                    <pointLight ref={pointLightRef} intensity={intensity} position={[-100,61,1]}  />
-                    <pointLight ref={pointLightRef} intensity={intensity} position={[0.2,0.2,0.2]}  />
-                    <pointLight ref={pointLightRef} intensity={intensity} position={[-50, 50, -23]}  />
-                    <pointLight ref={pointLightRef} intensity={intensity} position={[100,-100,1]}  />
-                    <pointLight ref={pointLightRef} intensity={intensity} position={[-100, 100, 10]}  />
+                    <pointLight ref={pointLightRef} intensity={intensity} position={[100,41,1]}  />
+                    <pointLight ref={pointLightRef} intensity={intensity} position={[0.2,41,-30]}  />
+                    <pointLight ref={pointLightRef} intensity={intensity} position={[-50, 41, -23]}  />
+                    <pointLight ref={pointLightRef} intensity={intensity} position={[100,-41,20]}  />
+                    <pointLight ref={pointLightRef} intensity={intensity} position={[-100, 41, 10]}  />
 
                     <primitive object={PointLightHelper} />
                     {/* useHelper(pointLightRef, pointLightHelper, 'red') */}
