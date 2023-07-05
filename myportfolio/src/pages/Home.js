@@ -1,24 +1,23 @@
-import React from 'react'
+import {React, useRef} from 'react'
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import '../styles/Home.css'
 import * as THREE from 'three';
-import Capsule from '../components/Capsule';
 import {Canvas} from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
+import { OrbitControls, useHelper, Plane } from '@react-three/drei';
+import Carousel from "../components/NoHorseCarousel2"
+import { PointLight, PointLightHelper } from 'three';
+import { useControls} from 'leva'
 
 
-// const scene = new THREE.Scene();
 
-// const geometry = new THREE.CapsuleGeometry( 1, 1, 4, 8 ); 
-// const material = new THREE.MeshBasicMaterial( {color: 0x00ff83} );
-// const mesh = new THREE.Mesh(geometry, material);
-// scene.add(mesh);
-
-// const camera = new THREE.PerspectiveCamera(45);
 
 function Home() {
+    const pointLightRef = useRef();
+    // const pointLightHelper = new PointLightHelper(PointLight, 1, 'red');
+    const { intensity, x, y, z } = useControls({ intensity: { value: 1, min: 0, max: 20 }, x: { value: 1, min: -100, max: 100 }, y: { value: 1, min: -100, max: 100}, z: { value: 1, min: -100, max: 100 } });
+
   return (
     <div className='home'>
         <div className='about'>
@@ -28,9 +27,18 @@ function Home() {
                 <div style={{ width: '1000px', height: '1000px' }}>
                 <Canvas className='canvas'>
                     <OrbitControls enableZoom={false} />
-                    <ambientLight intensity={0.5} />
-                    <directionalLight position={[-2,5,2]} intensity={1} />
-                   <Capsule /> 
+                    <Plane scale={10} rotation-x={-Math.PI / 2} position-y={-1} />
+                    <pointLight ref={pointLightRef} intensity={intensity} position={[x, y, z]}  />
+                    <pointLight ref={pointLightRef} intensity={intensity} position={[-100,61,1]}  />
+                    <pointLight ref={pointLightRef} intensity={intensity} position={[0.2,0.2,0.2]}  />
+                    <pointLight ref={pointLightRef} intensity={intensity} position={[-50, 50, -23]}  />
+                    <pointLight ref={pointLightRef} intensity={intensity} position={[100,-100,1]}  />
+                    <pointLight ref={pointLightRef} intensity={intensity} position={[-100, 100, 10]}  />
+
+                    <primitive object={PointLightHelper} />
+                    {/* useHelper(pointLightRef, pointLightHelper, 'red') */}
+
+                   <Carousel />
                 </Canvas>
                 </div>
                 <LinkedInIcon />
