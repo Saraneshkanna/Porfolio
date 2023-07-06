@@ -10,6 +10,7 @@ import { useFrame } from '@react-three/fiber';
 export default function Model(props) {
   const { nodes, materials } = useGLTF('/NoHorseCarousel3.gltf')
   const groupRef = useRef();
+  const scale = 1;
 
   useFrame(() => {
     // Update the rotation in each frame
@@ -19,8 +20,8 @@ export default function Model(props) {
   });
 
   return (
-    <group ref={groupRef} {...props} dispose={null}>
-      <PerspectiveCamera makeDefault={false} far={100} near={0.1} fov={26.5} position={[6.616, 3.56, 7.113]} rotation={[-0.433, 0.71, 0.294]} />
+    <group ref={groupRef} {...props} dispose={null} scale={[scale,scale,scale]}>
+      <PerspectiveCamera makeDefault={false} far={100} near={0.1} fov={26.5} position={[6.616, 4.56, 7.113]} rotation={[-0.433, 0.71, 0.294]} />
       <mesh geometry={nodes.pedestal_3.geometry} material={materials.pedestal_1} rotation={[0, 0.243, 0]} scale={[1.183, 0.171, 1.183]}>
         <group position={[0, 2.16, 0]} scale={[0.222, 1.534, 0.222]}>
           <mesh geometry={nodes.Cylinder004.geometry} material={materials.gold_2} />

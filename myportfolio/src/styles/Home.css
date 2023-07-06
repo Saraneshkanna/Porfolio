@@ -7,39 +7,144 @@
   
   .about {
     width: 100%;
-    height: calc(100vh - 100px);
+    height: 2000px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: top;
     align-items: center;
     text-align: center;
     background-color: #ffffff;
     color: #f0f0f0;
+    background-image: url("../images/PurpleBG5.png");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   
   .about h2 {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 80px;
-    color: #e9d35b;
-    height: 50px;
+    font-size: 110px;
+    color: #ffffff;
+    /* height: 50px; */
+    margin: 0px;
   }
 
-
-canvas{
-  width: 1200px;
-  height: 300px;
-}
 .prompt{
   display: flex;
-  flex: 1 1 0;
+
   width: 100%;
-  justify-content: space-between
+  justify-content: space-between;
 }
 
 .d{
-  width: 50%;
+  width: 30%;
+  height: 1500px;
 }
 .textIntro{
   font-size: 72px;
-  width: 50%
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.Intro{
+  /* background-image: url("../images/PurpleBG");
+  background-size: cover;
+  background-repeat: no-repeat; */
+  justify-content: right;
+  padding-top: 175px;
+  width:80%;
+}
+
+.photo{
+  border-radius: 50%;
+  width: 90%;
+  height: auto;
+  margin-top: 80px;
+}
+
+.photDiv{
+  width: 25%;
+}
+
+.links{
+  margin-bottom: 1px;
+}
+
+.createText{
+  font-size: 80px;
+  margin: 10px;
+  font-family: 'Georgia';
+  padding-top: 35px;
+}
+
+
+.createDiv{
+  display: flex;
+  justify-content: right;
+  height: 200px;
+  /* margin:100px 0px 100px 0px; */
+}
+
+.pointRight{
+  /* padding-top: 200px; */
+  font-size: 'large';
+}
+
+.createDiv svg {
+  color: white;
+  font-size: 200px;
+  cursor: pointer;
+  /* padding-top: 80px; */
+}
+
+.more{
+  margin: 0px;
+}
+
+.skillsButton
+{
+  height:100px;
+  width:350px;
+  background-color: orange;
+  font-size: 36px;
+  border-radius: 20px;
+  text-align: center;
+  
+}
+
+.aboutText{
+  text-align: left;
+  margin-left: 100px;
+}
+
+.left{
+  display: flex;
+  flex-direction: column;
+  width:70%;
+  gap: 50px;
+  height: 2000px;
+}
+
+.aboutText p{
+  font-size: 36px;
+  width: 70%;
+}
+
+.buttonDiv{
+  display: flex;
+  padding-left: 100px;
+}
+
+.socials p{
+  font-size: 50px;
+  padding-left: 100px;
+}
+
+.socials svg {
+  color: white;
+  margin: 20px;
+  font-size: 100px;
+  cursor: pointer;
 }
