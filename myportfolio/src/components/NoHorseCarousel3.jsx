@@ -14,7 +14,7 @@ export default function Model(props) {
   useFrame(() => {
     // Update the rotation in each frame
     if (groupRef.current) {
-      groupRef.current.rotation.y += 0.0035; // Adjust the rotation speed as needed
+      groupRef.current.rotation.y += 0.004; // Adjust the rotation speed as needed
     }
   });
 
