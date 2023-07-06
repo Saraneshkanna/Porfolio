@@ -5,11 +5,21 @@ Command: npx gltfjsx@6.2.5 NoHorseCarousel3.gltf
 
 import React, { useRef } from 'react'
 import { useGLTF, PerspectiveCamera } from '@react-three/drei'
+import { useFrame } from '@react-three/fiber';
 
 export default function Model(props) {
   const { nodes, materials } = useGLTF('/NoHorseCarousel3.gltf')
+  const groupRef = useRef();
+
+  useFrame(() => {
+    // Update the rotation in each frame
+    if (groupRef.current) {
+      groupRef.current.rotation.y += 0.0035; // Adjust the rotation speed as needed
+    }
+  });
+
   return (
-    <group {...props} dispose={null}>
+    <group ref={groupRef} {...props} dispose={null}>
       <PerspectiveCamera makeDefault={false} far={100} near={0.1} fov={26.5} position={[6.616, 3.56, 7.113]} rotation={[-0.433, 0.71, 0.294]} />
       <mesh geometry={nodes.pedestal_3.geometry} material={materials.pedestal_1} rotation={[0, 0.243, 0]} scale={[1.183, 0.171, 1.183]}>
         <group position={[0, 2.16, 0]} scale={[0.222, 1.534, 0.222]}>
