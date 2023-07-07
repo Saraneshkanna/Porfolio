@@ -14,7 +14,7 @@ import MySQL from "../images/tech/MySQL.png"
 import python from "../images/tech/python.png"
 import React from "../images/tech/React.png"
 import solidity from "../images/tech/solidity.png"
-import tf from "../images/tech/tf.jpg"
+import tf from "../images/tech/tf.png"
 import threejs from "../images/tech/threejs.png"
 import ue from "../images/tech/ue.png"
 import unity from "../images/tech/unity.png"
@@ -22,7 +22,7 @@ import unity from "../images/tech/unity.png"
 
 const technologies = [
     {
-        name: "CPP",
+        name: "C++",
         icon: CPP
     },
     {
@@ -30,35 +30,24 @@ const technologies = [
         icon: CSS
     },
     {
-        name: "firebase",
+        name: "Firebase",
         icon: firebase
     },
     {
-        name: "flutter",
+        name: "Flutter",
         icon: flutter
-    },
-    {
-        name: "git",
-        icon: git
     },
     {
         name: "HTML",
         icon: HTML
     },
+
     {
-        name: "JAVA",
-        icon: JAVA
-    },
-    {
-        name: "JS",
+        name: "JavaScript",
         icon: JS
     },
     {
-        name: "MySQL",
-        icon: MySQL
-    },
-    {
-        name: "python",
+        name: "Python",
         icon: python
     },
     {
@@ -66,23 +55,23 @@ const technologies = [
         icon: React
     },
     {
-        name: "solidity",
+        name: "Solidity",
         icon: solidity
     },
     {
-        name: "tf",
+        name: "TensorFlow",
         icon: tf
     },
     {
-        name: "threejs",
+        name: "Three.js",
         icon: threejs
     },
     {
-        name: "ue",
+        name: "Unreal Engine 5",
         icon: ue
     },
     {
-        name: "unity",
+        name: "Unity3D",
         icon: unity
     },
     {
@@ -97,10 +86,7 @@ const technologies = [
         name: "C#",
         icon: Csharp
     },
-    {
-        name: "Figma",
-        icon: Figma
-    },
+
 ];
 
 export {technologies};

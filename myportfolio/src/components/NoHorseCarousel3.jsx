@@ -10,7 +10,7 @@ import { useFrame } from '@react-three/fiber';
 export default function Model(props) {
   const { nodes, materials } = useGLTF('/NoHorseCarousel3.gltf')
   const groupRef = useRef();
-  const scale = 1;
+  const scale = 1.2;
 
   useFrame(() => {
     // Update the rotation in each frame

@@ -39,7 +39,7 @@ function Home() {
                                 <p className='createText'> And I like to create </p>
                                 <ForwardIcon className='pointRight' />
                             </div>
-                            <p className='more'>And everything in between!</p>
+                            {/* <p className='more'>And everything in between!</p> */}
                         </div>
                     </div>
                     <div className='aboutText'>
@@ -60,7 +60,7 @@ function Home() {
         
                 </div>
                
-                <div className='d'>
+                <div className='carousel'>
                     <Canvas className='canvas'>
                         <OrbitControls enableZoom={false} />
                         {/* <Plane scale={10} rotation-x={-Math.PI / 2} position-y={-1} /> */}

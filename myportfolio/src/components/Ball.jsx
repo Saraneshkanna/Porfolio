@@ -1,5 +1,5 @@
-import React, { Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
+import React, { Suspense, useRef } from "react";
+import { Canvas, useFrame  } from "@react-three/fiber";
 import {
   Decal,
   Float,
@@ -9,6 +9,8 @@ import {
 } from "@react-three/drei";
 import { FrontSide, BackSide, DoubleSide, Shape, ExtrudeGeometry } from "three";
 import CanvasLoader from "./Loader";
+
+
 
 const getHeartShape = () => {
     const x = -5, y = -10;
@@ -28,27 +30,37 @@ const getHeartShape = () => {
 };
 
 const Ball = (props) => {
+  const groupRef = useRef();
+
+  useFrame(() => {
+    // Update the rotation in each frame
+    if (groupRef.current) {
+      groupRef.current.rotation.y += 0.004; // Adjust the rotation speed as needed
+    }
+  });
   const [decal] = useTexture([props.imgUrl]);
   return (
-    <Float speed={1.75} rotationIntensity={1} floatIntensity={2} rotation={[0,0,Math.PI]}>
-      <ambientLight intensity={0.25} />
-      <directionalLight position={[0, 0, 0.05]} />
-      <mesh castShadow receiveShadow scale={0.3}>
-        {/* <shapeGeometry args={[getHeartShape()]}/> */}
-        <extrudeGeometry args={[getHeartShape(), 3]} />
+    <Float speed={0.25} rotationIntensity={1} floatIntensity={2} >
+      <ambientLight intensity={1} />
+      <directionalLight position={[0, 0, 0.1]} />
+      <directionalLight position={[0, 0, -0.1]} />
+      <mesh ref={groupRef} castShadow receiveShadow scale={0.3} rotation={[0,0,Math.PI]}>
+        {/* <shapeGeometry args={[getHeartShape(), 100]}/> */}
+        <extrudeGeometry args={[getHeartShape(), 1]} />
         {/* <icosahedronGeometry args={[1, 1]} /> */}
         <meshStandardMaterial
           color='#ffffff'
           polygonOffset
           polygonOffsetFactor={-5}
           flatShading
+          // wireframe
           side={DoubleSide}
         />
         <Decal
-            debug
+            // debug
           position={[0, 0, 1]}
           rotation={[2 * Math.PI, 0, Math.PI]}
-          scale={13.5}
+          scale={[10,10,1]}
           map={decal}
           side={BackSide}
           flatShading
