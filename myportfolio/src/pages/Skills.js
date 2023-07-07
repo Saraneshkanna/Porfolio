@@ -9,8 +9,14 @@ function Skills() {
       <div className='navbar'>
         <Navbar />
       </div>
-      <div className='skills'>
-        <SkillBalls />
+      <div className='content'>
+        <div className='skillsTitle'>
+          <h2>My Skills</h2>
+          <p>Here are some of the technologies that I love using!</p>
+        </div>
+        <div className='skills'>
+          <SkillBalls />
+        </div>
       </div>
       <div className='footer'>
         <Footer />

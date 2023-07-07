@@ -30,21 +30,14 @@ const getHeartShape = () => {
 };
 
 const Ball = (props) => {
-  const groupRef = useRef();
-
-  useFrame(() => {
-    // Update the rotation in each frame
-    if (groupRef.current) {
-      groupRef.current.rotation.y += 0.004; // Adjust the rotation speed as needed
-    }
-  });
   const [decal] = useTexture([props.imgUrl]);
+
   return (
-    <Float speed={0.25} rotationIntensity={1} floatIntensity={2} >
+    <Float speed={2} rotationIntensity={1} floatIntensity={3} >
       <ambientLight intensity={1} />
       <directionalLight position={[0, 0, 0.1]} />
       <directionalLight position={[0, 0, -0.1]} />
-      <mesh ref={groupRef} castShadow receiveShadow scale={0.3} rotation={[0,0,Math.PI]}>
+      <mesh castShadow receiveShadow scale={0.3} rotation={[0,0,Math.PI]}>
         {/* <shapeGeometry args={[getHeartShape(), 100]}/> */}
         <extrudeGeometry args={[getHeartShape(), 1]} />
         {/* <icosahedronGeometry args={[1, 1]} /> */}
