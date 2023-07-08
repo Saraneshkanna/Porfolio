@@ -33,7 +33,7 @@ function Experience() {
           <VerticalTimeline lineColor='#ffffff'>
               <VerticalTimelineElement 
                   className='vertical-timeline-element--intellect'
-                  date="JUNE 2023"
+                  date="June 2023"
                   dateClassName='date'
                   iconStyle={{background : "#e28743", color:"#fff"}}
                   icon={<WorkIcon />}
