@@ -86,7 +86,6 @@ const technologies = [
         name: "C#",
         icon: Csharp
     },
-
 ];
 
 export {technologies};
