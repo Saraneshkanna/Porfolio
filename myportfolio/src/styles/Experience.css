@@ -1,0 +1,38 @@
+.vertical-timeline-element--intellect img{
+    width:100px;
+    padding-top: 10px;
+}
+
+.work-desc{
+    display: flex;
+    justify-content: left;
+    gap:20px;
+}
+
+.vertical-timeline-element-content.bounce-in {
+    padding-top: 0px;
+}
+
+.vertical-timeline-element-title{
+    padding-top:24px;
+}
+
+.vertical-timeline-element-title h2{ 
+    color: blueviolet;
+    font-size: 30px;
+    margin: 10px 0px 10px 0px;
+}
+
+.vertical-timeline-element-title h3{
+    margin-top: 0px;
+    color: hotpink;
+}
+
+.toolIcon p{
+    font-size: 32px;
+}
+
+.toolIcon svg{
+    font-size: 40px;
+    display: inline;
+}

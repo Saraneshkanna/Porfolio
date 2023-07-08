@@ -14,10 +14,11 @@
   }
   
   .navbar a {
-    color: rgb(250, 0, 250);
+    color: blueviolet;
     text-decoration: none;
     margin: 20px;
     font-size: 25px;
+    font-weight: 600;
   }
   
   .toggleButton {

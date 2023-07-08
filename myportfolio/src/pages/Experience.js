@@ -3,8 +3,12 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import "react-vertical-timeline-component/style.min.css"
 import SchoolIcon from '@mui/icons-material/School';
 import WorkIcon from '@mui/icons-material/Work';
+import ConstructionIcon from '@mui/icons-material/Construction';
 import Navbar from '../components/Navbar';
-// import '../styles/experience.css'
+import ReactPic from "../images/tech/React.png"
+import FigmaPic from "../images/tech/figma.png"
+import intellectPic from "../images/Timeline/intellect.jpeg"
+import '../styles/Experience.css'
 
 function Experience() {
   return (
@@ -15,17 +19,33 @@ function Experience() {
         <div className='timeline'>
           <VerticalTimeline lineColor='#3e497a'>
               <VerticalTimelineElement 
-                  className='vertical-timeline-element--work'
-                  date="June-2023"
+                  className='vertical-timeline-element--intellect'
+                  date="June 2023"
                   iconStyle={{background : "#3e497a", color:"#fff"}}
                   icon={<WorkIcon />}
                   >
-                      <h2 className='vertical-timeline-element-title'>App Development Intern </h2>
-                      <p>Intellect Design Arena, Chennai</p>
+                    <div className='work-desc'>
+                      <div className='vertical-timeline-element-title'>
+                        <h2 >App Development Intern </h2>
+                        <h3>Intellect Design Arena, Chennai</h3>
+                      </div>
+                      <div>
+                        <img src={intellectPic} />
+                      </div>
+                    </div>
+                    
+                      <p>Enter workflow description here orem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit sapien non ex pharetra consectetur. Vestibulum non gravida lectus. Proin commodo malesuada enim, ut convallis eros viverra sit amet. Ut consectetur lacinia nulla in rutrum. Maecenas convallis mi nec orci scelerisque, ac scelerisque lectus ultrices. Curabitur et dolor nec nunc sagittis finibus</p>
+                      <div className='toolIcon'>
+
+                        <p className='tools'><ConstructionIcon /> I used:</p>
+                      </div>
+                      
+                      <img src={ReactPic}></img>
+                      <img src={FigmaPic}></img>
               </VerticalTimelineElement> 
               <VerticalTimelineElement 
-                  className='vertical-timeline-element--work'
-                  date="June-2023"
+                  className='vertical-timeline-element--vifr'
+                  date="May 2022 - July 2022"
                   iconStyle={{background : "#3e497a", color:"#fff"}}
                   icon={<WorkIcon />}
                   >
