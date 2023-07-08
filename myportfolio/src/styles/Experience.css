@@ -1,5 +1,11 @@
-.vertical-timeline-element--intellect img{
-    width:100px;
+.timeline{
+    background-image: url("../images/PurpleBG3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.vertical-timeline-element img{
+    height: 80px;
     padding-top: 10px;
 }
 
@@ -29,10 +35,48 @@
 }
 
 .toolIcon p{
-    font-size: 32px;
+    font-size: 26px;
 }
 
 .toolIcon svg{
-    font-size: 40px;
+    font-size: 30px;
     display: inline;
+}
+
+.vertical-timeline-element--vifr .vifrLogo{ 
+    height:90px;
+    margin-top:15px;
+}
+
+.vertical-timeline-element-date{
+    color: #ffffff;
+    font-size: 54px;
+    font-weight: 900;
+}
+
+.vertical-timeline-element--education .vertical-timeline-element-title h3{
+    color: #10de43;
+    font-size: 24px;
+}
+
+.vertical-timeline-element--education .vertical-timeline-element-title h2{
+    color: #026afa;
+    
+}
+.vertical-timeline-element--education .vertical-timeline-element-title p{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.vertical-timeline-element--education img{
+    margin-top: 20px;
+}
+
+.timeline h1{
+    margin-top: 0px;
+    padding-top: 50px;
+    font-size: 72px;
+    color: #ffffff;
+    /* padding-left: 50px; */
+    text-align: center;
 }
