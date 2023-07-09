@@ -34,7 +34,7 @@ export const projectsData = [
         title:"Tamil <-> Braille Converter",
         category: ["Web", "Machine Learning"],
         link: "https://github.com/Saraneshkanna/Tamil-Braille-Converter",
-        desc: "A website for converting Tamil Braille into Tamil text along with features like Optical Character Recognition and Text-To-Speech! ",
+        desc: "A website for converting Tamil Braille into Tamil Text and vice versa, along with features like Optical Character Recognition and Text-To-Speech! ",
         stack: "Python",
     },
     {

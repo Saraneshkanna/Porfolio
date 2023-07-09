@@ -3,6 +3,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import ForwardIcon from '@mui/icons-material/Forward';
+import InstagramIcon from '@mui/icons-material/Instagram'
 import '../styles/Home.css'
 import * as THREE from 'three';
 import {Canvas} from '@react-three/fiber';
@@ -13,6 +14,7 @@ import { useControls} from 'leva'
 import myImage from "../images/Me(1).jpg"
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { Instagram } from '@mui/icons-material';
 
 
 
@@ -30,6 +32,14 @@ function Home() {
             <div className='prompt'>
                 <div className='left'> 
                     <div className='Intro'>
+                    <div className='socials'>
+                        <div className='icons'>
+                            <LinkedInIcon />
+                            <GitHubIcon />
+                            <InstagramIcon />
+                            <EmailIcon />
+                        </div>
+                    </div>
                         <div className='photDiv'>
                             <img className='photo' src={myImage}></img>
                         </div>
@@ -49,14 +59,7 @@ function Home() {
                     <div className='buttonDiv'>
                         <button className='skillsButton'>See my skills &rarr;</button>
                     </div>
-                    <div className='socials'>
-                        <p>Find me on:</p>
-                        <div className='icons'>
-                            <LinkedInIcon />
-                            <GitHubIcon />
-                            <EmailIcon />
-                        </div>
-                    </div>
+                    
         
                 </div>
                
