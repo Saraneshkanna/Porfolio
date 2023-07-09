@@ -4,32 +4,32 @@ export const projectsData = [
     {
         id:1,
         image: Work1,
-        title:"Video Chat with Integrated Sign Language Detection",
-        category: "Web"
+        title:"Video Chat with Sign Language Detection",
+        category: ["Web", " Machine Learning"]
     },
     {
         id:2,
         image: Work1,
         title:"Tyre Pressure Monitor using Blockchain",
-        category: "Blockchain"
+        category: ["Blockchain", "Web"]
     },
     {
         id:3,
         image: Work1,
         title:"VClean App",
-        category: "Mobile App"
+        category: "Apps"
     },
     {
         id:4,
         image: Work1,
-        title:"Web Design",
-        category: "Web"
+        title:"Tamil <-> Braille Converter",
+        category: ["Web", "Machine Learning"]
     },
     {
         id:5,
         image: Work1,
-        title:"Web Design",
-        category: "Web"
+        title:"Martian Showdown",
+        category: "Games"
     },
 ];
 
@@ -44,6 +44,12 @@ export const projectsNav = [ //Put all the categories from up above here
         name:"Blockchain"
     },
     {
-        name:"Mobile App"
+        name:"Apps"
+    },
+    {
+        name:"Machine Learning"
+    },
+    {
+        name:"Games"
     },
 ];
