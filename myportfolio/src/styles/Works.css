@@ -17,7 +17,8 @@
     --h1-font-size : 2.25rem;
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
-    --normal-font-size: 1rem;
+    --normal-font-size: 1.25rem;
+    --actually-normal-font-size: 1rem;
     --small-font-size: 0.875rem;
     --smaller-font-size: 0.813rem;
     --tiny-font-size: 0.625rem;
@@ -91,16 +92,20 @@ img{
 
 .section{
     padding: 6rem 0 2 rem;
+    background-image: url("../images/BlackBG3.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .section__title{
-    font-size: var(--h1-font-size);
+    font-size: var(--big-font-size);
     color: var(--title-color);
+    padding-top: 1.5rem;
 }
 
 .section__subtitle{
     display: block;
-    font-size: var(--small-font-size);
+    font-size: var(--h3-font-size);
     margin-bottom: 4rem;
 }
 
@@ -142,6 +147,7 @@ img{
 }
 
 .work__filters{
+    padding-bottom: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -164,12 +170,14 @@ img{
 }
 
 .work__container{
-    grid-template-columns: repeat(2, max-content);
+    grid-template-columns: repeat(3, max-content);
     gap: 3rem;
     justify-content: center;
+    padding-bottom: 50px;
 }
 
 .work__card{
+    width: 400px;
     background-color: var(--container-color);
     border: 1px solid rgba(0,0,0,0.1);
     padding: 1.25rem;
@@ -177,7 +185,7 @@ img{
 }
 
 .work__img{
-    width: 295px;
+    width: 360px;
     border-radius: 1rem;
     margin-bottom: var(--mb-1);
 }
@@ -208,6 +216,22 @@ img{
 .active-work{
     background-color: var(--title-color);
     color: #fff;
+}
+
+.itemDesc{
+    padding: 10px 0px;
+    font-size: var(--actually-normal-font-size);
+}
+
+.itemLink{
+    font-size: var(--actually-normal-font-size);
+}
+
+.itemStack{
+    font-size: var(--actually-normal-font-size);
+    font-weight: 600;
+    padding-bottom: 10px;
+    color:hotpink;
 }
 
 @media screen and (max-width : 992px){
@@ -243,6 +267,10 @@ img{
     .work__img{
         width: 100%;
     }
+    .work__filters{
+        flex-wrap: wrap;
+        column-gap: 0.25rem;
+   }
 }
 
 @media screen and (max-width: 350px) {
@@ -251,6 +279,7 @@ img{
    }
 
    .work__filters{
+        flex-wrap: wrap;
         column-gap: 0.25rem;
    }
 }

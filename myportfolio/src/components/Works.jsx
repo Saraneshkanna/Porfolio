@@ -14,7 +14,7 @@ const Works = () => {
         }
         else{
             const newProjects = projectsData.filter((project) => {
-                return project.category === item.name;
+                return project.category.includes(item.name);
             });
             setProjects(newProjects);
         };

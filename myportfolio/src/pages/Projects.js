@@ -10,7 +10,7 @@ function Projects() {
         <Navbar></Navbar>
         <section className='work section' id='portfolio'> 
             <h2 className='section__title'>My Projects</h2>
-            <span className='section__subtitle'>Most recent projects</span>
+            <span className='section__subtitle'>See what I get upto in my free time!</span>
             <Works />
         </section>
         <Footer />
