@@ -7,6 +7,7 @@ import Skills from "./pages/Skills";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer"
 
+
 function App() {
   return (
     <div className="App">
@@ -18,7 +19,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/skills" element={<Skills />} />
         </Routes>
-{/* 
+{/*     
         <Footer /> */}
       </Router>
     </div>

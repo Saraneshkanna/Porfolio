@@ -31,37 +31,27 @@ const getHeartShape = () => {
 };
 
 const Ball = (props) => {
-  const [decal] = useTexture([props.imgUrl]);
+  const [decal1] = useTexture([props.icon1]);
+  const [decal2] = useTexture([props.icon2]);
   const[active, setActive] = useState(false);
   const {scale} = useSpring({scale: active ? 0.3: 0.2})
-
-
-  const [springProps, setSpringProps] = useSpring(() => ({
-    position: [0, 0, 0],
-    config: { mass: 1, tension: 120, friction: 20, precision: 0.001 },
-  }));
-  
-  useEffect(() => {
-    setSpringProps({ position: [0, 1, 0], immediate: true });
-    const interval = setInterval(() => {
-      setSpringProps({ position: [0, -1, 0], immediate: false });
-      setSpringProps({ position: [0, 1, 0], immediate: false });
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [setSpringProps]);
-  
+  const extrudeSettings = {
+    steps: 1, // Number of divisions along the extrusion
+    depth: 1, // Depth of the extrusion
+    bevelEnabled: false, // Disable bevel
+  };
   return (
     <Float speed={2} rotationIntensity={1} floatIntensity={3} >
-      <ambientLight intensity={1} />
-      <directionalLight position={[0, 0, 0.1]} />
-      <directionalLight position={[0, 0, -0.1]} />
-      <animated.mesh  castShadow receiveShadow scale={scale} rotation={[0,0,Math.PI]} onClick={()=> {setActive(!active)}}>
-        <extrudeGeometry args={[getHeartShape(), 1]} />
+      <ambientLight intensity={2} />
+      {/* <directionalLight position={[0, 0, 1]} /> */}
+      {/* <directionalLight position={[0, 0, -0.1]} /> */}
+      <animated.mesh scale={scale} rotation={[0,0,Math.PI]} onClick={()=> {setActive(!active)}}>
+        <extrudeGeometry args={[getHeartShape(), extrudeSettings]} />
         <meshStandardMaterial
           color='#ffffff'
           polygonOffset
           polygonOffsetFactor={-5}
-          flatShading
+        //   flatShading
         //   wireframe
           side={DoubleSide}
         />
@@ -70,8 +60,18 @@ const Ball = (props) => {
           position={[0, 0, 1]}
           rotation={[2 * Math.PI, 0, Math.PI]}
           scale={[10,10,1]}
-          map={decal}
+          map={decal1}
           side={BackSide}
+          flatShading
+        />
+
+        <Decal
+            // debug
+          position={[0, 0, -0.4]}
+          rotation={[Math.PI, 0, 0]}
+          scale={[10,10,1]}
+          map={decal2}
+          side={FrontSide}
           flatShading
         />
       </animated.mesh>
@@ -79,17 +79,18 @@ const Ball = (props) => {
   );
 };
 
-export const BallCanvas = ({ icon }) => {
+export const BallCanvas = ( {icon1, icon2} ) => {
+
   return (
     <Canvas
-      frameloop='always'
+      frameloop="always"
       dpr={[1, 2]}
       camera={{ fov: 75, near: 0.1, far: 1000, position: [0, 0, 5] }}
-      gl={{ preserveDrawingBuffer: true }}
+      gl={{ preserveDrawingBuffer: false}}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls enableZoom={false} />
-        <Ball imgUrl={icon} />
+        <Ball icon1={icon1} icon2={icon2} />
       </Suspense>
 
       <Preload all />

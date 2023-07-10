@@ -19,24 +19,118 @@ import threejs from "../images/tech/threejs.png"
 import ue from "../images/tech/ue.png"
 import unity from "../images/tech/unity.png"
 
-
+// const technologies = [{}];
 const technologies = [
+    {
+        name: "C++",
+        icon1: C,
+        icon2: CPP,
+    },
+    {
+        name: "CSS",
+        icon1: HTML, 
+        icon2: CSS,
+    },
+    {
+        name: "Firebase",
+        icon1: flutter, 
+        icon2: firebase
+    },
+//     {
+//         name: "Flutter",
+//         icon: flutter
+//     },
+//     {
+//         name: "HTML",
+//         icon: HTML
+//     },
+
+    {
+        name: "JavaScript",
+        icon1: JS, 
+        icon2 :solidity
+    },
+    {
+        name: "Python",
+        icon1: python,
+        icon2: tf
+    },
+    {
+        name: "React",
+        icon1: React, 
+        icon2: threejs
+    },
+//     {
+//         name: "Solidity",
+//         icon: solidity
+//     },
+//     {
+//         name: "TensorFlow",
+//         icon: tf
+//     },
+//     {
+//         name: "Three.js",
+//         icon: threejs
+//     },
+    {
+        name: "Unreal Engine 5",
+        icon1: ue, 
+        icon2: unity
+    },
+//     {
+//         name: "Unity3D",
+//         icon: unity
+//     },
+        {
+            name: "AWS",
+            icon1: aws,
+            icon2: git
+        },
+//     {
+//         name: "C",
+//         icon: C
+//     },
+//     {
+//         name: "C#",
+//         icon: Csharp
+//     },
+];
+
+const languages = [
     {
         name: "C++",
         icon: CPP
     },
     {
-        name: "CSS",
-        icon: CSS
+        name: "C",
+        icon: C
     },
     {
-        name: "Firebase",
-        icon: firebase
+        name: "C#",
+        icon: Csharp
     },
     {
-        name: "Flutter",
-        icon: flutter
+        name: "Solidity",
+        icon: solidity
     },
+    {
+        name: "JavaScript",
+        icon: JS
+    },
+];
+
+const gameDev = [
+    {
+        name: "Unreal Engine 5",
+        icon: ue
+    },
+    {
+        name: "Unity3D",
+        icon: unity
+    },
+]
+
+const webDev = [
     {
         name: "HTML",
         icon: HTML
@@ -47,45 +141,17 @@ const technologies = [
         icon: JS
     },
     {
-        name: "Python",
-        icon: python
+        name: "CSS",
+        icon: CSS
     },
     {
         name: "React",
         icon: React
     },
     {
-        name: "Solidity",
-        icon: solidity
-    },
-    {
-        name: "TensorFlow",
-        icon: tf
-    },
-    {
         name: "Three.js",
         icon: threejs
     },
-    {
-        name: "Unreal Engine 5",
-        icon: ue
-    },
-    {
-        name: "Unity3D",
-        icon: unity
-    },
-    {
-        name: "AWS",
-        icon: aws
-    },
-    {
-        name: "C",
-        icon: C
-    },
-    {
-        name: "C#",
-        icon: Csharp
-    },
-];
+]
 
-export {technologies};
+export {technologies, languages, gameDev, webDev};
