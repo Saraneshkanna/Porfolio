@@ -1,5 +1,6 @@
-import React, { Suspense, useRef } from "react";
+import React, { Suspense, useRef, useState, useEffect } from "react";
 import { Canvas, useFrame  } from "@react-three/fiber";
+import {useSpring, animated} from '@react-spring/three'
 import {
   Decal,
   Float,
@@ -31,22 +32,37 @@ const getHeartShape = () => {
 
 const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl]);
+  const[active, setActive] = useState(false);
+  const {scale} = useSpring({scale: active ? 0.3: 0.2})
 
+
+  const [springProps, setSpringProps] = useSpring(() => ({
+    position: [0, 0, 0],
+    config: { mass: 1, tension: 120, friction: 20, precision: 0.001 },
+  }));
+  
+  useEffect(() => {
+    setSpringProps({ position: [0, 1, 0], immediate: true });
+    const interval = setInterval(() => {
+      setSpringProps({ position: [0, -1, 0], immediate: false });
+      setSpringProps({ position: [0, 1, 0], immediate: false });
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [setSpringProps]);
+  
   return (
     <Float speed={2} rotationIntensity={1} floatIntensity={3} >
       <ambientLight intensity={1} />
       <directionalLight position={[0, 0, 0.1]} />
       <directionalLight position={[0, 0, -0.1]} />
-      <mesh castShadow receiveShadow scale={0.3} rotation={[0,0,Math.PI]}>
-        {/* <shapeGeometry args={[getHeartShape(), 100]}/> */}
+      <animated.mesh  castShadow receiveShadow scale={scale} rotation={[0,0,Math.PI]} onClick={()=> {setActive(!active)}}>
         <extrudeGeometry args={[getHeartShape(), 1]} />
-        {/* <icosahedronGeometry args={[1, 1]} /> */}
         <meshStandardMaterial
           color='#ffffff'
           polygonOffset
           polygonOffsetFactor={-5}
           flatShading
-          // wireframe
+        //   wireframe
           side={DoubleSide}
         />
         <Decal
@@ -58,7 +74,7 @@ const Ball = (props) => {
           side={BackSide}
           flatShading
         />
-      </mesh>
+      </animated.mesh>
     </Float>
   );
 };
@@ -66,8 +82,9 @@ const Ball = (props) => {
 export const BallCanvas = ({ icon }) => {
   return (
     <Canvas
-      frameloop='demand'
+      frameloop='always'
       dpr={[1, 2]}
+      camera={{ fov: 75, near: 0.1, far: 1000, position: [0, 0, 5] }}
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
