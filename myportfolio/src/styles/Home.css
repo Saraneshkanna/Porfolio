@@ -32,19 +32,22 @@
   display: flex;
 
   width: 100%;
-  justify-content: space-between;
+  justify-content: left;
+  gap: 8%;
 }
 
 .carousel{
-  width: 30%;
-  height: 800px;
+  width: 20%;
+  height: 700px;
+  margin-right: 5%;
 }
 .textIntro{
   font-size: 54px;
-  width: 60%;
+  width: 65%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: top;
+  margin-top: 60px;
   gap: 10px;
 }
 
@@ -52,10 +55,10 @@
   /* background-image: url("../images/PurpleBG");
   background-size: cover;
   background-repeat: no-repeat; */
-  justify-content: space-around;
-  padding-top: 25px;
+  justify-content: left;
+  padding-top: 75px;
   padding-bottom: 50px;
-  padding-left: 50px;
+  /* padding-left: 50px; */
   width:100%;
 }
 
@@ -67,7 +70,7 @@
 }
 
 .photDiv{
-  width: 25%;
+  width: 35%;
 }
 
 .links{
@@ -83,8 +86,8 @@
 
 
 .createDiv{
-  display: flex;
-  justify-content: right;
+  /* display: flex; */
+  /* justify-content: center; */
   height: 200px;
   /* margin:100px 0px 100px 0px; */
 }
@@ -118,13 +121,13 @@
 
 .aboutText{
   text-align: left;
-  margin-left: 100px;
 }
 
 .left{
   display: flex;
   flex-direction: column;
-  width:70%;
+  width: 60%;
+  margin-left: 5%;
   gap: 10px;
   height: 1000px;
 }
@@ -137,7 +140,7 @@
 
 .buttonDiv{
   display: flex;
-  padding-left: 100px;
+  padding-top: 5%;
 }
 
 .socials p{
@@ -156,4 +159,21 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding-top: 40px;
 }
+
+.arrow {
+    pointer-events: none;
+  }
+   
+  .arrow__path {
+    stroke: #fff;
+    fill: transparent;
+    stroke-dasharray: 20 10;
+    stroke-width: 5px;
+  }
+   
+  .arrow__head line {
+    stroke: #fff;
+    stroke-width: 4px;
+  }

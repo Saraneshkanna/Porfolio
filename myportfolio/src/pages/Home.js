@@ -14,7 +14,8 @@ import { useControls} from 'leva'
 import myImage from "../images/Me(1).jpg"
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { Instagram } from '@mui/icons-material';
+import Arrow, { DIRECTION } from 'react-arrows'
+import {FaLongArrowAltRight} from 'react-icons/fa'
 
 
 
@@ -27,7 +28,20 @@ function Home() {
     <div className='home'>
         <div>
             <Navbar />
-        </div>
+        </div> 
+        <Arrow
+            className='arrow'
+            from={{
+            direction: DIRECTION.RIGHT,
+            node: () => document.getElementById('createText'),
+            translation: [0.5, 1],
+            }}
+            to={{
+            direction: DIRECTION.LEFT,
+            node: () => document.getElementById('canvas'),
+            translation: [-0.4, 2.5],
+            }}
+        />
         <div className='about'>
             <div className='prompt'>
                 <div className='left'> 
@@ -45,9 +59,13 @@ function Home() {
                         </div>
                         <div className='textIntro'>
                             <h2>Hi, I'm Saranesh!</h2>
+
                             <div className='createDiv'>
-                                <p className='createText'> And I like to create </p>
-                                <ForwardIcon className='pointRight' />
+                                <p>I'm a final year undergrad </p>
+                                <p className='createText' id='createText'> student who likes to create </p>
+                                <p>And Much More!</p>
+                                {/* <ForwardIcon className='pointRight' /> */}
+                                {/* <FaLongArrowAltRight /> */}
                             </div>
                             {/* <p className='more'>And everything in between!</p> */}
                         </div>
@@ -64,8 +82,8 @@ function Home() {
                 </div>
                
                 <div className='carousel'>
-                    <Canvas className='canvas'>
-                        <OrbitControls enableZoom={false} />
+                    <Canvas className='canvas' id='canvas'>
+                        {/* <OrbitControls enableZoom={false} /> */}
                         {/* <Plane scale={10} rotation-x={-Math.PI / 2} position-y={-1} /> */}
                         <pointLight ref={pointLightRef} intensity={intensity} position={[100, 50, 100]}  />
                         <pointLight ref={pointLightRef} intensity={intensity} position={[100,41,1]}  />
