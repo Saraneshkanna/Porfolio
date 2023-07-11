@@ -8,8 +8,8 @@ function Footer() {
   return (
     <div className='footer'>
         <div className='socialMedia'>
-            <LinkedInIcon />
-            <GitHubIcon />
+            <a href='https://www.linkedin.com/in/saraneshkanna-vivek-391661237/'><LinkedInIcon /></a>
+            <a href='https://github.com/Saraneshkanna'><GitHubIcon /></a>
             <EmailIcon />
         </div>
         <p> &copy; 2023 insertdomainamehere</p>

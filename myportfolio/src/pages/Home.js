@@ -16,6 +16,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Arrow, { DIRECTION } from 'react-arrows'
 import {FaLongArrowAltRight} from 'react-icons/fa'
+import { Link } from 'react-router-dom';
 
 
 
@@ -47,9 +48,9 @@ function Home() {
                     <div className='Intro'>
                         <div className='socials'>
                             <div className='icons'>
-                                <LinkedInIcon />
-                                <GitHubIcon />
-                                <InstagramIcon />
+                                <a href='https://www.linkedin.com/in/saraneshkanna-vivek-391661237/'><LinkedInIcon /></a>
+                                <a href='https://github.com/Saraneshkanna'><GitHubIcon /></a>
+                                <a href='https://www.instagram.com/saraneshkanna/'><InstagramIcon /></a>
                                 <EmailIcon />
                             </div>
                             <div className='photDiv'>
@@ -87,7 +88,7 @@ function Home() {
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit sapien non ex pharetra consectetur. Vestibulum non gravida lectus. Proin commodo malesuada enim, ut convallis eros viverra sit amet. Ut consectetur lacinia nulla in rutrum. Maecenas convallis mi nec orci scelerisque, ac scelerisque lectus ultrices. Curabitur et dolor nec nunc sagittis finibus.</p>
                     </div>
                     <div className='buttonDiv'>
-                        <button className='skillsButton'>See my skills &rarr;</button>
+                        <button className='skillsButton'><Link to="/skills">See my skills &rarr;</Link></button>
                     </div> 
             </div>          
         </div>
