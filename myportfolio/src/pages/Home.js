@@ -29,7 +29,7 @@ function Home() {
         <div>
             <Navbar />
         </div> 
-        <Arrow
+        {/* <Arrow
             className='arrow'
             from={{
             direction: DIRECTION.RIGHT,
@@ -41,22 +41,21 @@ function Home() {
             node: () => document.getElementById('canvas'),
             translation: [-0.4, 2.5],
             }}
-        />
+        /> */}
         <div className='about'>
             <div className='prompt'>
-                <div className='left'> 
                     <div className='Intro'>
-                    <div className='socials'>
-                        <div className='icons'>
-                            <LinkedInIcon />
-                            <GitHubIcon />
-                            <InstagramIcon />
-                            <EmailIcon />
-                        </div>
-                    </div>
-                        <div className='photDiv'>
-                            <img className='photo' src={myImage}></img>
-                        </div>
+                        <div className='socials'>
+                            <div className='icons'>
+                                <LinkedInIcon />
+                                <GitHubIcon />
+                                <InstagramIcon />
+                                <EmailIcon />
+                            </div>
+                            <div className='photDiv'>
+                                <img className='photo' src={myImage}></img>
+                            </div>
+                        </div>     
                         <div className='textIntro'>
                             <h2>Hi, I'm Saranesh!</h2>
 
@@ -64,10 +63,21 @@ function Home() {
                                 <p>I'm a final year undergrad </p>
                                 <p className='createText' id='createText'> student who likes to create </p>
                                 <p>And Much More!</p>
-                                {/* <ForwardIcon className='pointRight' /> */}
-                                {/* <FaLongArrowAltRight /> */}
                             </div>
                             {/* <p className='more'>And everything in between!</p> */}
+                        </div>
+                        <div className='carousel'>
+                            <Canvas className='canvas' id='canvas'>
+                                {/* <OrbitControls enableZoom={false} /> */}
+                                {/* <Plane scale={10} rotation-x={-Math.PI / 2} position-y={-1} /> */}
+                                <pointLight ref={pointLightRef} intensity={intensity} position={[100, 50, 100]}  />
+                                <pointLight ref={pointLightRef} intensity={intensity} position={[100,41,1]}  />
+                                <pointLight ref={pointLightRef} intensity={intensity} position={[26,41,-30]}  />
+                                <pointLight ref={pointLightRef} intensity={intensity} position={[-50, 41, -23]}  />
+                                <pointLight ref={pointLightRef} intensity={intensity} position={[100,-41,20]}  />
+                                <pointLight ref={pointLightRef} intensity={intensity} position={[-100, 41, 10]}  />
+                                <Carousel />
+                            </Canvas>
                         </div>
                     </div>
                     <div className='aboutText'>
@@ -76,30 +86,8 @@ function Home() {
                     </div>
                     <div className='buttonDiv'>
                         <button className='skillsButton'>See my skills &rarr;</button>
-                    </div>
-                    
-        
-                </div>
-               
-                <div className='carousel'>
-                    <Canvas className='canvas' id='canvas'>
-                        {/* <OrbitControls enableZoom={false} /> */}
-                        {/* <Plane scale={10} rotation-x={-Math.PI / 2} position-y={-1} /> */}
-                        <pointLight ref={pointLightRef} intensity={intensity} position={[100, 50, 100]}  />
-                        <pointLight ref={pointLightRef} intensity={intensity} position={[100,41,1]}  />
-                        <pointLight ref={pointLightRef} intensity={intensity} position={[26,41,-30]}  />
-                        <pointLight ref={pointLightRef} intensity={intensity} position={[-50, 41, -23]}  />
-                        <pointLight ref={pointLightRef} intensity={intensity} position={[100,-41,20]}  />
-                        <pointLight ref={pointLightRef} intensity={intensity} position={[-100, 41, 10]}  />
-
-                        {/* <primitive object={PointLightHelper} /> */}
-                        {/* useHelper(pointLightRef, pointLightHelper, 'red') */}
-
-                    <Carousel />
-                    </Canvas>
-                </div>
-            </div>
-           
+                    </div> 
+            </div>          
         </div>
         <div>
             <Footer/>
