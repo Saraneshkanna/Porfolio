@@ -62,8 +62,6 @@ function Home() {
                             <div className='createDiv'>
                                 <p>I'm a final year undergrad </p>
                                 <p className='createText' id='createText'> student who likes to create &rarr;</p> 
-
-                                <p className='muchMore'>And Much More!</p>
                             </div>
                             {/* <p className='more'>And everything in between!</p> */}
                         </div>
@@ -80,6 +78,9 @@ function Home() {
                                 <Carousel />
                             </Canvas>
                         </div>
+                    </div>
+                    <div>
+                        <p className='muchMore'>..and everything in between!</p>
                     </div>
                     <div className='aboutText'>
                         <h2>About Me</h2>

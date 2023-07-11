@@ -25,6 +25,7 @@
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     color: #ffffff;
     font-size: 3.5vw;
+    margin-bottom: 3vw;
   }
 
   .textIntro p{
@@ -96,16 +97,17 @@
 }
 
 .muchMore{
-  margin-top: 4vw;
+  font-size: 2.5vw;
+  padding-right: 12vw;
 }
 
 .skillsButton
 {
-  height:75px;
-  width:250px;
+  height: 5vw;
+  width:18vw;
   background-color: orange;
-  font-size: 28px;
-  border-radius: 20px;
+  font-size: 2vw;
+  border-radius: 1vw;
   text-align: center;
   
 }
@@ -123,15 +125,21 @@
   height: 1000px;
 }
 
+.aboutText h2{
+    font-size: 4vw;
+    width: 70%;
+    color: #fff;
+    margin: 2vw 0;
+  }
+
 .aboutText p{
   font-size: 24px;
   width: 70%;
-  margin-right: 0px;
 }
 
 .buttonDiv{
   display: flex;
-  padding-top: 5%;
+  padding-top: 1.5vw;
 }
 
 .socials{
@@ -217,12 +225,46 @@
    }
 
   .carousel{
-    height: 100vw;
+    height: 120vw;
+    display: flex;
+    justify-content: center;
   }
 
   .canvas{
-    width: 200px;
+    min-width: 350px;
   }
+
+  .muchMore{
+    font-size: 6vw;
+    padding-right: 6vw ;
+  }
+
+  .aboutText h2{
+    font-size: 10vw;
+    width: 100%;
+    color: #fff;
+    margin: 5vw 0;
+  }
+
+    .aboutText p{
+    font-size: 4vw;
+    margin: 0px;
+    padding: 0px;
+    width: 90%;
+    }
+
+    .skillsButton{
+        height: 7vw;
+        width:30vw;
+        background-color: orange;
+        font-size: 3vw;
+        border-radius: 2vw;
+        text-align: center;
+    }
+
+    .buttonDiv{
+        padding-top: 3vw;
+      }      
         
 }
 
