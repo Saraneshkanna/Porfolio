@@ -29,10 +29,10 @@ function Home() {
         <div>
             <Navbar />
         </div> 
-        {/* <Arrow
+        <Arrow
             className='arrow'
             from={{
-            direction: DIRECTION.RIGHT,
+            direction: DIRECTION.UP,
             node: () => document.getElementById('createText'),
             translation: [0.5, 1],
             }}
@@ -41,7 +41,7 @@ function Home() {
             node: () => document.getElementById('canvas'),
             translation: [-0.4, 2.5],
             }}
-        /> */}
+        />
         <div className='about'>
             <div className='prompt'>
                     <div className='Intro'>
@@ -61,8 +61,9 @@ function Home() {
 
                             <div className='createDiv'>
                                 <p>I'm a final year undergrad </p>
-                                <p className='createText' id='createText'> student who likes to create </p>
-                                <p>And Much More!</p>
+                                <p className='createText' id='createText'> student who likes to create &rarr;</p> 
+
+                                <p className='muchMore'>And Much More!</p>
                             </div>
                             {/* <p className='more'>And everything in between!</p> */}
                         </div>

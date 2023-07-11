@@ -27,6 +27,11 @@
     font-size: 3.5vw;
   }
 
+  .textIntro p{
+    font-size: 2.5vw;
+  }
+
+
 /* .prompt{
   display: flex;
   flex-wrap: wrap;
@@ -37,8 +42,10 @@
 
 .carousel{
     width: 35%;
+    height: 30vw;
 }
 .textIntro{
+    margin-top: 5vw;;
     width: 40%;
 }
 
@@ -49,10 +56,14 @@
 
 .photo{
   border-radius: 50%;
+  width: 80%;
 }
 
 .photDiv{
   width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .links{
@@ -66,8 +77,9 @@
 
 
 .createDiv{
-  /* display: flex; */
-  /* justify-content: center; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   /* margin:100px 0px 100px 0px; */
 }
 
@@ -83,8 +95,8 @@
   /* padding-top: 80px; */
 }
 
-.more{
-  margin: 0px;
+.muchMore{
+  margin-top: 4vw;
 }
 
 .skillsButton
@@ -158,3 +170,59 @@
     stroke: #fff;
     stroke-width: 4px;
   }
+
+
+  @media screen and (max-width: 576px) {
+   .Intro{
+    flex-direction: column;
+    align-items: center;
+   }
+
+   .textIntro{
+    width:100%
+   }
+
+   .about{
+    padding: 0% 5%;
+   }
+
+   .textIntro h2{
+        font-size: 10vw;
+        margin-bottom: 5vw;
+   }
+
+   .socials{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+   }
+
+   .socials svg{
+    font-size: 7.5vw;
+   }
+
+   .icons{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 5vw 0px;
+   }
+
+   .photo{
+    width: 75%;
+   }
+
+   .createDiv p{
+    font-size: 6vw;
+   }
+
+  .carousel{
+    height: 100vw;
+  }
+
+  .canvas{
+    width: 200px;
+  }
+        
+}
+
