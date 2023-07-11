@@ -15,6 +15,7 @@ function Skills() {
         <div className='skillsTitle'>
           <h2>My Skills</h2>
           <p>Here are some of the technologies that I love using!</p>
+          <p>(PS: Try turning the hearts around to discover more of my skills)</p>
         </div>
         <div className='skills'>
           <SkillBalls />

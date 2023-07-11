@@ -41,7 +41,7 @@ const Ball = (props) => {
     bevelEnabled: false, // Disable bevel
   };
   return (
-    <Float speed={2} rotationIntensity={1} floatIntensity={3} >
+    <Float speed={3} rotationIntensity={2} floatIntensity={4} >
       <ambientLight intensity={2} />
       {/* <directionalLight position={[0, 0, 1]} /> */}
       {/* <directionalLight position={[0, 0, -0.1]} /> */}
@@ -89,7 +89,7 @@ export const BallCanvas = ( {icon1, icon2} ) => {
       gl={{ preserveDrawingBuffer: false}}
     >
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={false} />
+        <OrbitControls enableZoom={false} minPolarAngle={Math.PI/2} maxPolarAngle={Math.PI/2} />
         <Ball icon1={icon1} icon2={icon2} />
       </Suspense>
 

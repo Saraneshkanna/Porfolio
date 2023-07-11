@@ -22,17 +22,17 @@ import unity from "../images/tech/unity.png"
 // const technologies = [{}];
 const technologies = [
     {
-        name: "C++",
+        name: "C/C++",
         icon1: C,
         icon2: CPP,
     },
     {
-        name: "CSS",
+        name: "HTML/CSS",
         icon1: HTML, 
         icon2: CSS,
     },
     {
-        name: "Firebase",
+        name: "Flutter/Firebase",
         icon1: flutter, 
         icon2: firebase
     },
@@ -46,17 +46,17 @@ const technologies = [
 //     },
 
     {
-        name: "JavaScript",
+        name: "JavaScript/Solidity",
         icon1: JS, 
         icon2 :solidity
     },
     {
-        name: "Python",
+        name: "Python/TensorFlow",
         icon1: python,
         icon2: tf
     },
     {
-        name: "React",
+        name: "React/Three.js",
         icon1: React, 
         icon2: threejs
     },
@@ -73,7 +73,7 @@ const technologies = [
 //         icon: threejs
 //     },
     {
-        name: "Unreal Engine 5",
+        name: "Unreal Engine 5/Unity3D",
         icon1: ue, 
         icon2: unity
     },
@@ -82,7 +82,7 @@ const technologies = [
 //         icon: unity
 //     },
         {
-            name: "AWS",
+            name: "AWS/Git",
             icon1: aws,
             icon2: git
         },
