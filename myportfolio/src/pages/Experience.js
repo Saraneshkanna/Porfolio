@@ -48,7 +48,9 @@ function Experience() {
                       </div>
                     </div>
                     
-                      <p>Enter workflow description here orem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit sapien non ex pharetra consectetur. Vestibulum non gravida lectus. Proin commodo malesuada enim, ut convallis eros viverra sit amet. Ut consectetur lacinia nulla in rutrum. Maecenas convallis mi nec orci scelerisque, ac scelerisque lectus ultrices. Curabitur et dolor nec nunc sagittis finibus</p>
+                      <p>In my time working at intellect as an intern, I actively led wire-framing the design of an updated version of a client’s corporate banking 
+                        app using Figma to completely redisgn the look and feel of the app. From these designs, I also developed custom concepts for multiple pages in
+                        the app in ReactJS.</p>
                       <div className='toolIcon'>
 
                         <p className='tools'><ConstructionIcon /> used:</p>
@@ -77,7 +79,10 @@ function Experience() {
                       
                     </div>
                     
-                      <p>Enter workflow description here orem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit sapien non ex pharetra consectetur. Vestibulum non gravida lectus. Proin commodo malesuada enim, ut convallis eros viverra sit amet. Ut consectetur lacinia nulla in rutrum. Maecenas convallis mi nec orci scelerisque, ac scelerisque lectus ultrices. Curabitur et dolor nec nunc sagittis finibus</p>
+                      <p>As a Unity Developer Intern, developed multiple modules for the project Halara, an immersive VR-based product for treating symptoms of autism and other 
+                        neurodevelopmental conditions in children. My contributions included emulating multiple real-world scenarios and gamifying 
+                        their objectives, developing an interactive choice-based conversational scene to help children overcome social anxiety and implementing eye-tracking 
+                        functionalities within the modules</p>
                       <div className='toolIcon'>
 
                         <p className='tools'><ConstructionIcon /> used:</p>

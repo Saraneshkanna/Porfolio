@@ -12,7 +12,7 @@ function Footer() {
             <a href='https://github.com/Saraneshkanna'><GitHubIcon /></a>
             <EmailIcon />
         </div>
-        <p> &copy; 2023 insertdomainamehere</p>
+        <p> &copy; 2023 porfolio-saraneshkanna.vercel.app</p>
     </div>
   )
 }

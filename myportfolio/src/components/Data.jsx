@@ -1,4 +1,9 @@
-import Work1 from "../images/Me(1).jpg";
+import Work1 from "../images/Work1.png";
+import Work2 from "../images/Work2.png";
+import Work3 from "../images/Work3.png";
+import Work4 from "../images/Work4.png";
+import Work5 from "../images/Work5.png";
+
 
 export const projectsData = [
     {
@@ -12,7 +17,7 @@ export const projectsData = [
     },
     {
         id:2,
-        image: Work1,
+        image: Work2,
         title:"Tyre Pressure Monitor using Blockchain",
         category: ["Blockchain", "Web"],
         link: "https://github.com/Saraneshkanna/Tyre-Pressure-Manager",
@@ -21,7 +26,7 @@ export const projectsData = [
     },
     {
         id:3,
-        image: Work1,
+        image: Work3,
         title:"VClean App",
         category: ["Apps"],
         link: "https://github.com/Saraneshkanna/VClean",
@@ -30,7 +35,7 @@ export const projectsData = [
     },
     {
         id:4,
-        image: Work1,
+        image: Work4,
         title:"Tamil <-> Braille Converter",
         category: ["Web", "Machine Learning"],
         link: "https://github.com/Saraneshkanna/Tamil-Braille-Converter",
@@ -39,7 +44,7 @@ export const projectsData = [
     },
     {
         id:5,
-        image: Work1,
+        image: Work5,
         title:"Martian Showdown",
         category: ["Games"],
         link: "https://youtu.be/zxeK_niq18A",
